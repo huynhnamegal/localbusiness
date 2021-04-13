@@ -1,0 +1,140 @@
+fields:
+  homepage:
+    label: Homepage
+    type: dropdown
+    span: auto
+  business_name:
+    label: Business Name
+    span: auto
+  telephone:
+    label: Telephone
+    span: auto
+  # Address section
+  address_section:
+    label: Address
+    type: section
+  streetAddress:
+    label: streetAddress
+    span: auto
+  addressLocality:
+    label: addressLocality
+    span: auto
+  addressRegion:
+    label: addressRegion
+    span: auto
+  postalCode:
+    label: postalCode
+    span: auto
+  addressCountry:
+    label: addressCountry
+    span: auto
+  # Image section
+  image_section:
+    label: Images
+    type: section
+  images:
+    label: Images
+    type: fileupload
+    mode: image
+  # Review section
+  review_section:
+    label: Review
+    type: section
+  enableRating:
+    label: Enable rating
+    type: switch
+    default: 1
+    span: left
+  ratingValue:
+    label: ratingValue
+    type: number
+    min: 0
+    max: 5
+    span: left
+    trigger:
+      field: enableRating
+      action: show
+      condition: checked
+  bestRating:
+    label: bestRating
+    type: number
+    min: 0
+    max: 5
+    span: right
+    trigger:
+      field: enableRating
+      action: show
+      condition: checked
+  review_author_name:
+    label: Author Name
+    span: left
+    trigger:
+      field: enableRating
+      action: show
+      condition: checked
+  # Geo
+  geo_section:
+    label: GeoCoordinates
+    type: section
+  enableGEO:
+    label: Enable GeoCoordinates
+    type: switch
+    default: 1
+    span: left
+  geo_latitude:
+    label: Latitude
+    type: number
+    span: left
+    trigger:
+      field: enableGEO
+      action: show
+      condition: checked
+  geo_longtitude:
+    label: Longtitude
+    type: number
+    span: right
+    trigger:
+      field: enableGEO
+      action: show
+      condition: checked
+  # Open hours
+  openhours_section:
+    label: openingHoursSpecification
+    type: section
+  enableOpeningHour:
+    label: Enable Opening hour
+    type: switch
+    default: 1
+    span: left
+  OpeningHoursSpecification:
+    label: OpeningHoursSpecification
+    type: repeater
+    style: collapsed
+    form:
+      fields:
+        dayOfWeek:
+          label: dayOfWeek
+          type: checkboxlist
+          options:
+            Monday: 'Monday'
+            Tuesday: 'Tuesday'
+            Wednesday: 'Wednesday'
+            Thursday: 'Thursday'
+            Friday: 'Friday'
+            Saturday: 'Saturday'
+            Sunday: 'Sunday'
+        open:
+          label: Open time
+          type: datepicker
+          mode: time
+          span: auto
+        close:
+          label: Close time
+          type: datepicker
+          mode: time
+          span: auto
+    trigger:
+      field: enableOpeningHour
+      action: show
+      condition: checked
+
