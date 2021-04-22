@@ -97,6 +97,10 @@ fields:
       field: enableGEO
       action: show
       condition: checked
+  price_range:
+    label: Price range
+    default: '$$$'
+    span: auto
   # Open hours
   openhours_section:
     label: openingHoursSpecification

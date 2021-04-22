@@ -1,2 +1,4 @@
 1.0.0: 
   - First version of LocalBusiness
+1.0.1:
+  - Add price_range fields, and replace special character in telephone fields
