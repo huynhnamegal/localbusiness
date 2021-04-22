@@ -1,0 +1,17 @@
+{
+    "name": "egalhtn/localbusiness-plugin",
+    "type": "october-plugin",
+    "description": "LocalBusiness structured data, rich snippets",
+    "homepage": "https://github.com/huynhnamegal/localbusiness",
+    "keywords": ["structured data", "rich snippet", "localbusiness"],
+    "authors": [
+        {
+            "name": "Huynh Thien Nam",
+            "email": "huynhnam0613@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
